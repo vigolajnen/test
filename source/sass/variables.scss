@@ -1,0 +1,35 @@
+// Глобальные переменные
+// Font
+$font-family-sans-serif: -apple-system, "blinkmacsystemfont", "Segoe UI", "Roboto",
+  "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-family-sans-serif-condensed: "DINNextW01-CondensedMed",
+  "AvenirNextCondensed-Bold", "Futura-CondensedExtraBold",
+  "HelveticaNeue-CondensedBold", "Ubuntu Condensed", "Liberation Sans Narrow",
+  "Franklin Gothic Demi Cond", "Arial Narrow", "Roboto Condensed",
+  sans-serif-condensed, "Arial", "Trebuchet MS", "Lucida Grande", "Tahoma",
+  sans-serif;
+$font-family-serif: "Georgia", "Times", "Times New Roman", serif;
+$font-family-mono: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "Courier",
+  monospace;
+
+
+$mainFont: "Roboto", "Arial", sans-serif;
+$mainFontMedium: "Roboto Medium", "Arial", sans-serif;
+
+// Size
+$mainFontSize: 16px;
+$mainLineHeight: 160%;
+
+// Main color
+$default-color: #ffffff;
+$primary-color: #4b5d68;
+$secondary-color: #212353;
+
+$bg-slider: #ffc84d;
+$bg-footer: #9c69e2;
+$bg-page: #e5e5e5;
+
+$table: 992px;
+$desktop: 1200px;
+$mobile: 767px;
