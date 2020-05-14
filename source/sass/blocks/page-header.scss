@@ -10,6 +10,10 @@
 
   box-sizing: border-box;
 
+  @media (max-width: $table) {
+    padding-top: 27px;
+  }
+
   &__burger {
     display: none;
     width: 26px;
@@ -64,7 +68,6 @@
     }
 
     &--close {
-      // display: none;
       position: absolute;
       top: 0;
       left: -100%;
@@ -88,14 +91,14 @@
     font-size: 18px;
     line-height: 160%;
     color: $default-color;
-    background-color: #b17ff4;
+    background-color: #9c69e2;
     border-radius: 50px;
     border: none;
     cursor: pointer;
 
     &:focus,
     &:hover {
-      opacity: 0.5;
+      background-color: #b17ff4;
     }
 
     @media (max-width: $table) {

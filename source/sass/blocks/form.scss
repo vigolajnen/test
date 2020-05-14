@@ -14,6 +14,7 @@
 
   @media (max-width: 575px) {
     align-items: center;
+    width: 100%;
   }
 
   & label {
@@ -31,14 +32,19 @@
       min-width: 300px;
     }
 
+    @media (max-width: $table) {
+      min-width: 252px;
+    }
+
     @media (max-width: 815px) {
       min-width: 250px;
     }
 
     @media (max-width: 753px) {
-      min-width: 247px;
+      // min-width: 247px;
+      width: 100%;
       margin-right: 0;
-      margin-bottom: 10px;
+      margin-bottom: 22px;
     }
   }
 
@@ -57,6 +63,10 @@
     color: #a9a0b6;
 
     outline: none;
+
+    @media (max-width: $mobile) {
+      padding: 16px 15px;
+    }
 
     &::placeholder {
       color: #a9a0b6;
@@ -105,7 +115,7 @@
 
     &:focus,
     &:hover {
-      opacity: 0.7;
+      background-color: #ffbe2d;
     }
   }
 }

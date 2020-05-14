@@ -1,29 +1,47 @@
 .features {
   padding-top: 94px;
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
-  padding-left: 50px;
-  padding-right: 50px;
   text-align: center;
   box-sizing: border-box;
 
   @media (max-width: $table) {
-    padding-left: 155px;
-    padding-right: 155px;
+    padding-top: 30px;
   }
 
-  &.container {
+  @media (max-width: $mobile) {
+    padding-top: 32px;
+  }
+
+  &__container {
+    @media (max-width: $table) {
+      padding: 0 155px;
+    }
+
+    @media (max-width: 950px) {
+      padding: 0 43px;
+    }
+
     @media (max-width: $mobile) {
-      padding: 0 15px;
+      padding: 0;
       padding-bottom: 50px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 56px;
+
+    @media (max-width: $mobile) {
+      padding: 0 20px;
+      margin-bottom: 57px;
     }
   }
 
   &__slider {
     position: relative;
     margin: 0 auto;
-    padding: 97px 120px;
-    margin-bottom: 150px;
+    padding: 87px 87px 97px;
+    margin-bottom: 160px;
 
     max-width: 1200px;
 
@@ -36,9 +54,19 @@
       margin-bottom: 100px;
     }
 
+    @media (max-width: $table) {
+      padding: 88px 86px 107px;
+      margin-bottom: 92px;
+    }
+
     @media (max-width: $mobile) {
-      padding: 50px 15px;
-      margin-bottom: 50px;
+      padding: 29px 57px 89px;
+      margin-bottom: 24px;
+      border-radius: 0;
+    }
+
+    @media (max-width: 452px) {
+      padding: 29px 7px 89px;
     }
 
     & .swiper-pagination {
@@ -48,8 +76,8 @@
       align-items: center;
 
       @media (max-width: $mobile) {
-        bottom: 25px;
-        left: 50%;
+        bottom: 34px;
+        left: 53%;
         transform: translateX(-50%);
       }
     }
@@ -60,6 +88,10 @@
       height: 6px;
       background-color: #ffffff;
       opacity: 1;
+
+      @media (max-width: $table) {
+        margin-right: 16px;
+      }
     }
 
     & .swiper-pagination-bullet-active {
@@ -70,27 +102,39 @@
   }
 
   & h1 {
+    margin: 0;
     margin-bottom: 37px;
+    font-family: $mainFont;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 130%;
+    color: $primary-color;
+
+    @media (max-width: $table) {
+      font-size: 40px;
+      line-height: 130%;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 35px;
+      margin-bottom: 44px;
+    }
   }
 
   & p {
     margin: 0 auto;
-    margin-bottom: 56px;
+    margin-bottom: 20px;
     max-width: 649px;
     font-style: normal;
     font-weight: normal;
     font-size: 23px;
     line-height: 160%;
     color: #4b5d68;
-
-    @media (max-width: $mobile) {
-      font-size: 18px;
-    }
   }
 
   &__slide {
     position: relative;
-    // 358px;
+    padding-top: 10px;
     min-height: 394px;
 
     box-sizing: border-box;
@@ -113,24 +157,69 @@
       color: #9c69e2;
 
       @media (max-width: $mobile) {
-        font-size: 101px;
+        display: none;
+      }
+    }
+
+    &--new {
+      position: relative;
+
+      &::after {
+        content: "new";
+        position: absolute;
+        top: 8px;
+        left: 36%;
+        width: 69px;
+        height: 34px;
+        font-family: $mainFontMedium;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        text-transform: uppercase;
+
+        color: #ffffff;
+
+        background: #f063b8;
+        box-shadow: 0 4px 0 #efe3c5;
+        border-radius: 0 0 4px 4px;
+
+        @media (max-width: $mobile) {
+          top: 4px;
+          left: 15%;
+        }
       }
     }
 
     &__inner {
       margin-left: 65px;
       margin-bottom: 10px;
-      padding: 40px 60px 40px 90px;
+      margin-right: 30px;
+      padding: 56px 60px 44px 114px;
       text-align: left;
       background: #fff3d7;
       box-shadow: 0 10px 0 #f5bd3f;
       border-radius: 50px;
       box-sizing: border-box;
 
+      @media (max-width: $desktop) {
+        padding-left: 70px;
+      }
+
+      @media (max-width: $table) {
+        padding-left: 114px;
+        margin-right: 55px;
+      }
+
       @media (max-width: $mobile) {
-        margin-left: 25px;
-        padding: 15px;
-        padding-left: 30px;
+        margin-left: 14px;
+        margin-right: 12px;
+        padding: 54px 15px 40px 30px;
+      }
+
+      & h2 {
+        margin: 0;
+        margin-bottom: 33px;
       }
     }
 
@@ -174,7 +263,8 @@
     & p {
       margin: 0;
       margin-bottom: 20px;
-      min-width: 216px;
+      width: 100%;
+      max-width: 216px;
       min-height: 160px;
       font-style: normal;
       font-weight: normal;
@@ -182,6 +272,10 @@
       line-height: 160%;
 
       color: #4b5d68;
+
+      @media (max-width: 950px) {
+        max-width: 100%;
+      }
 
       @media (max-width: $mobile) {
         min-width: 100%;

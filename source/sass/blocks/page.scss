@@ -15,20 +15,6 @@
   &--overlay {
     overflow: hidden;
   }
-
-  & h1 {
-    margin: 0;
-    font-family: $mainFont;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 130%;
-    color: $primary-color;
-
-    @media (max-width: $table) {
-      font-size: 40px;
-      line-height: 130%;
-    }
-  }
 }
 
 @supports (display: flex) {

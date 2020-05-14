@@ -114,7 +114,7 @@
         subItem.classList.remove('fadeOutLeft');
       }
 
-      if (window.screen.width > 992) { 
+      if (window.screen.width > 992) {
         fadeNavOpen(subItem);
       }
     });
@@ -137,7 +137,7 @@
       subItem.classList.add('fadeOutLeft');
       subItem.classList.remove('fadeInLeft');
 
-      if (window.screen.width > 992) { 
+      if (window.screen.width > 992) {
         fadeNavClose(subItem);
       }
     });
@@ -145,12 +145,12 @@
 
   navItems.forEach(function (navItem) {
     navItem.addEventListener('click', function () {
-      
+
       var subList = navItem.lastChild;
       var subLists = navItem.lastChild.childNodes;
 
       if (subList) {
-        
+
         navItem.classList.toggle('nav__item--active');
 
         subItemsClose();
