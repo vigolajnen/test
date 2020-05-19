@@ -46,10 +46,6 @@
     @media (max-width: $table) {
       margin-right: 70px;
     }
-
-    // @media (max-width: 575px) {
-    //   margin: 0 auto 10px;
-    // }
   }
 
   &__form {
@@ -114,7 +110,7 @@
 
     &:focus,
     &:hover {
-      opacity: 0.5;
+      opacity: 1;
     }
 
     @media (max-width: $table) {

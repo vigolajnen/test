@@ -72,10 +72,6 @@
       opacity: 1;
     }
 
-    &:hover {
-      opacity: 0.5;
-    }
-
     &:focus {
       opacity: 1;
     }
@@ -111,6 +107,7 @@
     cursor: pointer;
 
     outline: none;
+    transition: 0.5s;
 
     &:focus,
     &:hover {

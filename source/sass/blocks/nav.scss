@@ -14,6 +14,24 @@
       margin-right: 27px;
     }
 
+    @media (min-width: $table) {
+      &:hover {
+        & .nav__sub-list {
+          display: block;
+        }
+
+        & .nav__link {
+          color: #9c69e2;
+        }
+
+        & .nav__link svg {
+          fill: #9c69e2;
+          transform: translateY(0%) rotate(180deg);
+          transition: transform 0.5s;
+        }
+      }
+    }
+
     &--active {
       & .nav__sub-list {
         display: flex;
@@ -31,9 +49,11 @@
       & .nav__link svg {
         fill: #9c69e2;
         transform: translateY(-50%) rotate(180deg);
+        transition: transform 0.5s;
 
         @media (max-width: $table) {
           transform: translateY(-50%) rotate(0deg);
+          transition: transform 0.5s;
         }
       }
     }
@@ -56,7 +76,7 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    padding: 10px 8px 10px;
+    padding: 10px 8px 18px;
     font-family: $mainFontMedium;
     font-style: normal;
     font-weight: 500;
@@ -67,10 +87,15 @@
 
     text-decoration: none;
     box-sizing: border-box;
+    transition: 0.5s;
 
     &:focus,
     &:hover {
-      opacity: 0.5;
+      color: #9c69e2;
+
+      & svg {
+        fill: #9c69e2;
+      }
     }
 
     @media (max-width: $table) {
@@ -79,23 +104,32 @@
       padding-left: 32px;
       font-size: 27px;
       line-height: 277%;
-
-      & svg {
-        fill: #9c69e2;
-        position: absolute;
-        right: 32px;
-        top: 50%;
-        transform: translateY(-50%) rotate(-90deg);
-
-        @media (max-width: $mobile) {
-          right: 16px;
-        }
-      }
     }
 
     @media (max-width: $mobile) {
       padding-left: 16px;
       font-size: 20px;
+    }
+
+    & svg {
+      width: 6.25px;
+      height: 10px;
+      transform: translateY(0%) rotate(0deg);
+      transition: transform 0.5s;
+
+      @media (max-width: $table) {
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        width: 11px;
+        height: 18px;
+        transform: translateY(-50%) rotate(-90deg);
+        transition: transform 0.5s;
+      }
+
+      @media (max-width: $mobile) {
+        right: 16px;
+      }
     }
   }
 
@@ -103,8 +137,8 @@
     display: none;
 
     position: absolute;
-    top: 115%;
-    left: -14px;
+    top: 100%;
+    left: -18px;
 
     padding: 15px;
     padding-left: 24px;
