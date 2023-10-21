@@ -1,0 +1,60 @@
+.tariff {
+  height: 100%;
+}
+
+@media (min-width: 567px) {
+  .tariff {
+    max-width: 360px;
+  }
+}
+
+.tariff__name {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24.857px; /* 124.286% */
+}
+
+.tariff__price {
+  position: relative;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54.686px; /* 109.371% */
+}
+
+.tariff__star {
+  position: absolute;
+  top: 10px;
+  right: -5px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tariff__val {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  opacity: 0.7;
+}
+
+@media (min-width: 960px) {
+  .tariff {
+    max-width: 335px;
+    height: 100%;
+  }
+
+  .tariff__price {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 66px; /* 110% */
+  }
+
+  .tariff__name {
+    font-size: 26px;
+    line-height: 30px; /* 115.385% */
+  }
+}

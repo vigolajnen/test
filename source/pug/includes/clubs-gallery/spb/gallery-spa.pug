@@ -1,0 +1,28 @@
+include ../../../mixins/carousel.pug
+
+//- 3
+div(class='relative')
+  div(class='p-4 pl-0 pr-6 mb-1 mt-2 text-md font-semibold') 
+    span(class='text-curious-blue-500') Спа-комплекс
+    |
+    | финская, турецкая и инфракрасная сауны
+
+  div(class='w-8 h-8 absolute top-5 right-0 text-picton-blue-500')
+    +svg_icon(("images/sprite.svg"), "scroll", "32", "30", "0 0 32 30")
+
+  //- carousel
+  +carousel({
+    id: 'carousel-clubs-spa',
+    styles: 'carousel',
+    list: [
+      {
+        src: './images/clubs/spb/spa/1.webp'
+      },
+      {
+        src: './images/clubs/spb/spa/2.webp'
+      },
+      {
+        src: './images/clubs/spb/spa/3.webp'
+      },
+    ]
+  })

@@ -1,9 +1,11 @@
+include ../../mixins/svg_icon.pug
 include ../../mixins/section.pug
 include ../../mixins/section-title.pug
+include ../../mixins/carousel.pug
 
 +section({
-  styleWrapper: 'bg-porcelain-50 px-0 clubsGallery',
-  styleInner: 'relative',
+  styleWrapper: 'bg-porcelain-50 px-0 clubs-gallery',
+  styleInner: 'relative container mx-auto max-w-screen-xlg',
   show: 'fade',
 })
   +section-title({
@@ -12,3 +14,41 @@ include ../../mixins/section-title.pug
     text: 'клубы fitness house'
   })
 
+  div(class='hidden md:block')
+    +carousel({
+      id: 'carousel-clubs-main',
+      styles: 'carousel carousel--main',
+      list: [
+        {
+          src: './images/clubs/samara/main/1.webp'
+        },
+        {
+          src: './images/clubs/samara/main/2.webp'
+        },
+        {
+          src: './images/clubs/samara/main/3.webp'
+        },
+        {
+          src: './images/clubs/samara/main/1.webp'
+        },
+        {
+          src: './images/clubs/samara/main/2.webp'
+        },
+        {
+          src: './images/clubs/samara/main/3.webp'
+        },
+      ]
+    })
+  
+  div(class='block md:hidden')
+    include ./samara/gallery-pool.pug
+    include ./samara/gallery-gym.pug
+    include ./samara/gallery-spa.pug
+    include ./samara/gallery-group.pug
+
+    
+
+
+    
+
+    

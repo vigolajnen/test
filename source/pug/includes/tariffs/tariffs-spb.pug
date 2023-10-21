@@ -1,3 +1,4 @@
+include ../../mixins/svg_icon.pug
 include ../../mixins/section.pug
 include ../../mixins/section-title.pug
 
@@ -9,6 +10,9 @@ include ../../mixins/section-title.pug
 })
   +section-title({
     level: 2,
-    styleTitle: 'text-white-50',
+    styleTitle: 'text-white-50 text-center',
     text: 'Тарифы'
   })
+
+  include ./list-tariffs-spb.pug
+

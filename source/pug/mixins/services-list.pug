@@ -1,0 +1,7 @@
+mixin services-list(data={})
+  ul(class='flex flex-wrap text-center justify-center gap-4 md:gap-6')
+    each el in data.list
+      li(class='w-full sm:w-1/5 clubs-services-item grow '+ el.stylesLi)
+        div(class='relative h-32 z-2 clubs-item flex flex-wrap items-center w-full justify-center bg-no-repeat bg-cover' style='background-image: url(' + el.bgLi +')')
+          h3(class='relative p-4 md:mt-10 text-white-50 item-title mx-auto text-center w-full')=el.title
+        div(class='relative item-text w-100 h-36 bg-white-50 p-4 hidden sm:flex items-center mt-auto mb-0')=el.description

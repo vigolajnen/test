@@ -1,4 +1,4 @@
-mixin svg_icon(svg_url, svg_id, svg_width, svg_height, svg_viewBox)
+mixin svg_icon(svg_url, svg_id, svg_width, svg_height, svg_viewBox, svg_class)
   if svg_id
     svg(width=svg_width height=svg_height viewBox=svg_viewBox class="icon")&attributes(attributes)
       use(xlink:href= svg_url + '#' + svg_id)

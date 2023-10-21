@@ -1,3 +1,4 @@
+include ../../mixins/svg_icon.pug
 include ../../mixins/section.pug
 include ../../mixins/section-title.pug
 
@@ -11,4 +12,12 @@ include ../../mixins/section-title.pug
     styleTitle: 'md:px-10 xl:px-0',
     text: 'В абонемент включено'
   })
+
+  div(class='hidden sm:block xl:hidden')
+    div(class='w-8 h-8 absolute top-3 right-0')
+      +svg_icon(("images/sprite.svg"), "scroll", "32", "30", "0 0 32 30")
+    include ./samara/clubs-services-carousel.pug
+
+  div(class='block sm:hidden xl:block')
+    include ./samara/clubs-services-list.pug
 

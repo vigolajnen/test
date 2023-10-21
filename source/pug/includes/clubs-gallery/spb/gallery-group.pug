@@ -1,0 +1,37 @@
+include ../../../mixins/carousel.pug
+
+//- 4
+div(class='relative')
+  div(class='p-4 pl-0 pr-6 mb-1 mt-2 text-md font-semibold') Разнообразные групповые уроки
+    |
+    | 
+    span(class='text-curious-blue-500') растяжка, гимнастика, силовые
+
+  div(class='w-8 h-8 absolute top-5 right-0 text-picton-blue-500')
+    +svg_icon(("images/sprite.svg"), "scroll", "32", "30", "0 0 32 30")
+
+  //- carousel
+  +carousel({
+    id: 'carousel-clubs-group',
+    styles: 'carousel',
+    list: [
+      {
+        src: './images/clubs/spb/group/1.webp'
+      },
+      {
+        src: './images/clubs/spb/group/2.webp'
+      },
+      {
+        src: './images/clubs/spb/group/3.webp'
+      },
+      {
+        src: './images/clubs/spb/group/4.webp'
+      },
+      {
+        src: './images/clubs/spb/group/5.webp'
+      },
+      {
+        src: './images/clubs/spb/group/6.webp'
+      },
+    ]
+  })

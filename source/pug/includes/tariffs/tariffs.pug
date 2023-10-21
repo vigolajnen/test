@@ -1,3 +1,4 @@
+include ../../mixins/svg_icon.pug
 include ../../mixins/section.pug
 include ../../mixins/section-title.pug
 
@@ -12,3 +13,10 @@ include ../../mixins/section-title.pug
     styleTitle: 'text-white-50',
     text: 'Тарифы'
   })
+
+  div(class='hidden sm:block')
+    include ./carousel-tariffs.pug
+
+  div(class='block sm:hidden')
+    include ./list-tariffs.pug
+

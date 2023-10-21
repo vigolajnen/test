@@ -1,0 +1,38 @@
+.carousel {
+  &--main {
+    & .swiper-scrollbar {
+      display: none;
+    }
+  }
+
+  & .swiper-slide img {
+    min-height: 245px;
+  }
+
+  & .swiper-button-prev,
+  & .swiper-button-next {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    background-color: #fff;
+    border-radius: 50%;
+
+    @media (min-width: 640px) {
+      display: flex;
+    }
+  }
+
+  & .swiper-button-prev:after,
+  & .swiper-button-next:after {
+    font-size: inherit;
+  }
+
+  & .swiper-button-prev:hover,
+  & .swiper-button-next:hover {
+    color: #fff;
+    background-color: #fff06b;
+  }
+}

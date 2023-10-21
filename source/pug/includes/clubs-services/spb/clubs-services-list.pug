@@ -1,0 +1,25 @@
+include ../../../mixins/services-list.pug
+//- services-list
+
++services-list({
+  list: [
+    {
+      stylesLi: 'overflow-hidden rounded-xl',
+      title: 'Тренажерный зал',
+      description: 'Профессионально оборудованный и современный тренажёрный зал',
+      bgLi: './images/club-services/gym.webp',
+    },
+    {
+      stylesLi: 'overflow-hidden rounded-xl',
+      title: 'Спа-комплекс ',
+      description: 'Финская, турецкая и инфракрасная сауны',
+      bgLi: './images/club-services/spa.webp',
+    },
+    {
+      stylesLi: 'overflow-hidden rounded-xl',
+      title: 'Групповые уроки',
+      description: 'Разнообразные групповые уроки растяжка, гимнастика, силовые',
+      bgLi: './images/club-services/group.webp',
+    },
+  ]
+})

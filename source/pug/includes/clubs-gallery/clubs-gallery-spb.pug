@@ -1,13 +1,46 @@
+include ../../mixins/svg_icon.pug
 include ../../mixins/section.pug
 include ../../mixins/section-title.pug
+include ../../mixins/carousel.pug
 
 +section({
-  styleWrapper: 'faq bg-porcelain-50 faq pb-20 -mt-10 lg:-mt-16',
-  styleInner: ''
+  styleWrapper: 'bg-porcelain-50 px-0 clubs-gallery',
+  styleInner: 'relative container mx-auto max-w-screen-xlg',
+  show: 'fade',
 })
   +section-title({
     level: 3,
-    styleTitle: '',
+    styleTitle: 'px-4 md:pr-10 xl:px-0',
     text: 'клубы fitness house'
   })
 
+  div(class='hidden md:block')
+    +carousel({
+      id: 'carousel-clubs-main',
+      styles: 'carousel carousel--main',
+      list: [
+        {
+          src: './images/clubs/spb/main/1.webp'
+        },
+        {
+          src: './images/clubs/spb/main/2.webp'
+        },
+        {
+          src: './images/clubs/spb/main/3.webp'
+        },
+        {
+          src: './images/clubs/spb/main/1.webp'
+        },
+        {
+          src: './images/clubs/spb/main/2.webp'
+        },
+        {
+          src: './images/clubs/spb/main/3.webp'
+        },
+      ]
+    })
+  
+  div(class='block md:hidden')
+    include ./spb/gallery-gym.pug
+    include ./spb/gallery-spa.pug
+    include ./spb/gallery-group.pug

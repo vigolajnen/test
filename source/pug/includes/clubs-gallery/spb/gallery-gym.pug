@@ -1,0 +1,28 @@
+include ../../../mixins/carousel.pug
+
+//- 2
+div(class='relative')
+  div(class='p-4 pl-0 pr-6 mb-1 mt-2 text-md font-semibold') Профессионально оборудованный и 
+    |
+    | 
+    span(class='text-curious-blue-500') современный тренажёрный зал
+
+  div(class='w-8 h-8 absolute top-5 right-0 text-picton-blue-500')
+    +svg_icon(("images/sprite.svg"), "scroll", "32", "30", "0 0 32 30")
+
+  //- carousel
+  +carousel({
+    id: 'carousel-clubs-gym',
+    styles: 'carousel',
+    list: [
+      {
+        src: './images/clubs/spb/gym/1.webp'
+      },
+      {
+        src: './images/clubs/spb/gym/2.webp'
+      },
+      {
+        src: './images/clubs/spb/gym/3.webp'
+      },
+    ]
+  })

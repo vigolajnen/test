@@ -3,6 +3,7 @@
   let daysLabel = document.querySelector('#label-days');
   let hoursLabel = document.querySelector('#label-hours');
   let minutesLabel = document.querySelector('#label-minutes');
+  let secondsLabel = document.querySelector('#label-seconds');
   let hours = document.querySelector('#hours');
   let minutes = document.querySelector('#minutes');
   let seconds = document.querySelector('#seconds');
@@ -54,6 +55,7 @@
     daysLabel.textContent = declOfNum(d, ['день', 'дня', 'дней']);
     hoursLabel.textContent = declOfNum(h, ['час', 'часа', 'часов']);
     minutesLabel.textContent = declOfNum(m, ['минута', 'минуты', 'минут']);
+    secondsLabel.textContent = declOfNum(s, ['секунда', 'секунды', 'секунд']);
 
     dd.style.strokeDashoffset = 440 - 440 * d / 365;
     hh.style.strokeDashoffset = 440 - 440 * h / 24;

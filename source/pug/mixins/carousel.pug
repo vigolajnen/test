@@ -1,0 +1,10 @@
+mixin carousel(data={})
+  .swiper(id=data.id class=' ' + data.styles)
+    .swiper-wrapper
+      each slide in data.list
+        .swiper-slide(class='overflow-hidden flex flex-col rounded-xl')
+          img(class='w-full h-full object-cover' src=slide.src alt='' width='327' height='245' loading="lazy")
+
+    .swiper-button-prev
+    .swiper-button-next
+    .swiper-scrollbar

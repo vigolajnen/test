@@ -1,0 +1,23 @@
+include ../../mixins/svg_icon.pug
+include ../../mixins/section.pug
+include ../../mixins/section-title.pug
+
++section({
+  styleWrapper: 'bg-porcelain-50 clubs-services',
+  styleInner: '',
+  show: 'fade-in',
+})
+  +section-title({
+    level: 2,
+    styleTitle: 'md:px-10 xl:px-0',
+    text: 'В абонемент включено'
+  })
+
+  div(class='hidden sm:block xl:hidden')
+    div(class='w-8 h-8 absolute top-3 right-0')
+      +svg_icon(("images/sprite.svg"), "scroll", "32", "30", "0 0 32 30")
+    include ./spb/clubs-services-carousel.pug
+
+  div(class='sm:hidden xl:block')
+    include ./spb/clubs-services-list.pug
+

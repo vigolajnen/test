@@ -1,0 +1,26 @@
+
+.btn {
+  color: white;
+  border: 2px solid;
+  border-color: transparent;
+  background-color: #1c8ac8;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border-color: #1c8ac8;
+  color: #1c8ac8;
+}
+
+.btnOutline {
+  border: 2px solid;
+  background-color: transparent;
+  border-color: #1c8ac8;
+  color: #1c8ac8;
+}
+
+.btnOutline:hover {
+  border-color: transparent;
+  background-color: #1c8ac8;
+  color: white;
+}

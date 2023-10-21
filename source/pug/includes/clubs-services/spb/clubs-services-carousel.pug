@@ -1,0 +1,23 @@
+include ../../../mixins/carousel-services-item.pug
+
+.swiper(id='carousel-services' class='carousel-services')
+  .swiper-wrapper(class='gap-8')
+    .swiper-slide(class='overflow-hidden rounded-xl')
+      +carousel-services-item({
+        title: 'Тренажерный зал',
+        description: 'Профессионально оборудованный и современный тренажёрный зал',
+        bgItem: './images/club-services/gym.webp',
+      })
+    .swiper-slide(class='overflow-hidden rounded-xl')
+      +carousel-services-item({
+        title: 'Спа-комплекс ',
+        description: 'Финская, турецкая и инфракрасная сауны',
+        bgItem: './images/club-services/spa.webp',
+      })
+    .swiper-slide(class='overflow-hidden rounded-xl')
+      +carousel-services-item({
+        title: 'Групповые уроки',
+        description: 'Разнообразные групповые уроки растяжка, гимнастика, силовые',
+        bgItem: './images/club-services/group.webp',
+      })
+
