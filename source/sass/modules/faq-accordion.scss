@@ -1,0 +1,35 @@
+.faq-accordion {
+  border-top: 1px solid black;
+
+  & label {
+    border-bottom: 1px solid black;
+  }
+}
+
+.faq-accordion label:after {
+  content: '+';
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1c8ac8;
+  font-size: 2rem;
+}
+
+.faq-accordion input:checked + label:after {
+  content: '-';
+  line-height: normal;
+}
+
+.faq-accordion .accordion__content {
+  max-height: 0em;
+  transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+
+  & > div {
+    padding: 1rem;
+  }
+}
+.faq-accordion input[name='panel']:checked ~ .accordion__content {
+  /* Get this as close to what height you expect */
+  max-height: 50em;
+}

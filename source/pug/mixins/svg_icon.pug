@@ -1,0 +1,7 @@
+mixin svg_icon(svg_url, svg_id, svg_width, svg_height, svg_viewBox)
+  if svg_id
+    svg(width=svg_width height=svg_height viewBox=svg_viewBox class="icon")&attributes(attributes)
+      use(xlink:href= svg_url + '#' + svg_id)
+  else
+    svg()&attributes(attributes)
+      use(xlink:href= svg_url)

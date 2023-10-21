@@ -1,0 +1,19 @@
+//- index.pug
+block variables
+
+doctype html
+html.page(lang="ru" class="no-js")
+
+  include ./main-head.pug
+
+  body.page-body(class='flex flex-col h-full')
+    include ../includes/header/header.pug
+
+    main(class='grow')
+      block content 
+
+      include ../includes/faq/faq.pug
+
+    include ../includes/footer/footer-spb.pug
+
+    include ./main-script.pug

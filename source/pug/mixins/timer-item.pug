@@ -1,0 +1,16 @@
+mixin timer-item(data={})
+  div(class='timer__item h-20 xs:h-28 sm:h-48 lg:h-40 relative w-1/4 flex flex-col justify-center')
+
+    svg(viewBox='0 0 160 160' width='160' height='160' class='w-full h-full')
+      defs
+        lineargradient(id='gradient-' + data.id gradientTransform='rotate(90)')
+          stop(stop-color='#70D0FF')
+          stop(offset='0.734375' stop-color='#FAED76')
+          stop(offset='1' stop-color='#70D0FF')
+      circle(cx='80' cy='80' r='70')
+      circle( id=data.circleId class='circle' cx='80' cy='80' r='70' stroke='url(#gradient-' + data.id + ')')
+
+    div(class='timer__text text-center text-xs sm:text-sm md:text-lg')
+      block
+
+

@@ -1,0 +1,7 @@
+mixin section-title(data={})
+  if (data.level === 1)
+    h1(class='section-title relative mb-9 sm:mb-10 xl:mb-13 mb uppercase ' + data.styleTitle)=data.text
+  else if (data.level === 2)
+    h2(class='section-title relative mb-9 sm:mb-10 xl:mb-13 mb uppercase ' + data.styleTitle)=data.text
+  else 
+    h3(class='section-title relative mb-9 sm:mb-10 xl:mb-13 mb uppercase ' + data.styleTitle)=data.text

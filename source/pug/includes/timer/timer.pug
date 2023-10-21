@@ -1,0 +1,52 @@
+include ../../mixins/section.pug
+include ../../mixins/timer-wrapper.pug
+include ../../mixins/timer-item.pug
+
+-
+  const titleTimer = 'До конца акции осталось';
+
+
++section({
+  styleWrapper: '',
+  styleInner: 'overflow-hidden max-w-screen-lg w-full sm:px-4 xl:px-10 sm:w-full flex flex-wrap justify-between lg:justify-center items-center'
+  
+})
+
+  h2(class='relative z-10 mb-4 lg:mb-0 w-full grow lg:w-1/4 xl:w-56 timer-title uppercase text-center lg:text-left') !{titleTimer}
+  
+  +timer-wrapper({
+    id: 'timer-samara'
+  })
+    +timer-item({
+      id: 1,
+      circleId: 'dd',
+    })
+      div(class='timer__text text-center text-xs sm:text-sm md:text-lg')
+        #days 1
+        span#label-days 1
+
+    +timer-item({
+      id: 2,
+      circleId: 'hh',
+    })
+      div(class='timer__text text-center text-xs sm:text-sm md:text-lg')
+        #hours 2
+        span#label-hours 2
+
+    +timer-item({
+      id: 3,
+      circleId: 'mm',
+    })
+      div(class='timer__text text-center text-xs sm:text-sm md:text-lg')
+        #minutes 3
+        span#label-minutes 3
+
+    +timer-item({
+      id: 4,
+      circleId: 'ss',
+    })
+      div(class='timer__text text-center text-xs sm:text-sm md:text-lg')
+        #seconds 3
+        span#label-seconds 3
+
+

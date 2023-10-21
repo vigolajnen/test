@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'reset';
+@import 'fonts';
+@import 'base';
+
+@import 'modules/header';
+@import 'modules/section-title';
+@import 'modules/carousel-promo';
+@import 'modules/timer';
+@import 'modules/advantages';
+@import 'modules/clubs-services';
+@import 'modules/faq-accordion';

@@ -1,0 +1,19 @@
+extends ../layouts/main.pug
+block variables
+  include ../data/_constants.pug
+  include ../data/_spb.pug
+  -
+    const TITLE = `Fitness House в Spb | Безлимитный абонемент за месяц ${MIN_PRICE} руб.`
+    const DESCRIPTION = `Фитнес-клуб с бассейном с оплатой за месяц ${MIN_PRICE} руб. Бассейн, спа, групповые занятия, тренажерный зал.`
+    const url = 'spb'
+
+block content
+
+  include ../includes/promo/promo-spb.pug
+  include ../includes/timer/timer-spb.pug
+  include ../includes/clubs-services/clubs-services-spb.pug
+  include ../includes/tariffs/tariffs-spb.pug
+
+  div(class='overflow-hidden')
+    include ../includes/advantages/advantages-spb.pug
+  include ../includes/clubs-gallery/clubs-gallery-spb.pug

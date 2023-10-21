@@ -1,0 +1,38 @@
+-
+  const TARIFF_CLUBS_DATA = [
+    {
+      id: {
+        fullID: '407264', 
+        morningID: '404241',
+        subscriptionID: '409890', 
+      },
+      club: {
+        name: 'Монте Роза',
+        address: 'Московское ш., 4, корп. 4',
+        addressForm: 'Московское ш. 4, корп. 4 (IT-парк «Монте Роза»)',
+      }
+    }
+  ];
+
+  const TARIFF_DATA_SPB = [
+    {
+      id: 1,
+      mc: false,
+      period: 'morning',
+      webTitle: 'Утро (посещение с 7:00 до 17:00)',
+      title: '1 месяц утро Подписка',
+      price: '1500',
+      clubs: TARIFF_CLUBS_DATA,
+      countClubs: TARIFF_CLUBS_DATA.length,
+    },
+    {
+      id: 2,
+      mc: false,
+      period: 'full',
+      webTitle: '(свободное посещение)',
+      title: '1 месяц Подписка',
+      price: '1900',
+      clubs: TARIFF_CLUBS_DATA,
+      countClubs: TARIFF_CLUBS_DATA.length,
+    }
+  ];

@@ -1,0 +1,7 @@
+mixin advantages-list-item(data={})
+  li(class='flex flex-wrap grow-0 rounded-lg p-4 mb-4 border-curious-blue-500 border-2 border-solid')
+    div(class='pr-4 text-black-0 md:text-porcelain-950')
+      block
+    div(class='grow w-2/3')
+      div(class='uppercase text-blue-600 font-bold text-curious-blue-500 text-md md:text-lg')=data.title 
+      div(class="text-sm md:text-md")=data.description

@@ -1,0 +1,86 @@
+-
+  const TARIFF_CLUBS_DATA = [
+    {
+      id: {
+        fullID: '407264', 
+        morningID: '404241',
+        subscriptionID: '409890', 
+      },
+      club: {
+        name: 'Монте Роза',
+        address: 'Московское ш., 4, корп. 4',
+        addressForm: 'Московское ш. 4, корп. 4 (IT-парк «Монте Роза»)',
+      }
+    },
+    {
+      id: {
+        fullID: '407263', 
+        morningID: '404242',
+        subscriptionID: '409889',
+      },
+      club: {
+        address: 'Красноармейская ул., 131',
+        addressForm: 'ул. Красноармейская, д. 131 (ТРЦ «Гудок»)',
+        name: 'Гудок',
+      }
+    },
+    {
+      id: {
+        fullID: '407265',
+        morningID: '404244',
+        subscriptionID: '409892',
+      },
+      club: {
+        address:  'Южное ш., 5',
+        addressForm: 'Южное шоссе д. 5 (ТК «Амбар»)',
+        name: 'Амбар',
+      }
+    },
+    {
+      id: {
+        fullID: '409888',
+        morningID: '',
+        subscriptionID: '409891',
+      },
+      club: {
+        address: 'Ул. Стара Загора, 58',
+        addressForm: "ул. Стара Загора д. 58 (Шипка)",
+        name: 'Шипка',
+      }
+    }
+  ];
+
+  const TARIFF_CLUBS_DATA_FILTER = [...TARIFF_CLUBS_DATA].filter(item => item.club.name !== 'Шипка');
+
+  const TARIFF_DATA_SAMARA = [
+    {
+      id: 1,
+      mc: false,
+      period: 'morning',
+      webTitle: 'Утро (посещение с 7:00 до 17:00)',
+      title: '1 месяц утро Самара Подписка',
+      price: '1900',
+      clubs: TARIFF_CLUBS_DATA_FILTER,
+      countClubs: TARIFF_CLUBS_DATA_FILTER.length,
+    },
+    {
+      id: 2,
+      mc: false,
+      period: 'full',
+      webTitle: '(свободное посещение)',
+      title: '1 месяц Самара Подписка',
+      price: '2500',
+      clubs: TARIFF_CLUBS_DATA,
+      countClubs: TARIFF_CLUBS_DATA.length,
+    },
+    {
+      id: 3,
+      mc: true,
+      period: 'full',
+      webTitle: '(свободное посещение)',
+      title: 'Мультикарта Самара 1 месяц Подписка',
+      price: '3100',
+      clubs: TARIFF_CLUBS_DATA,
+      countClubs: TARIFF_CLUBS_DATA.length,
+    },
+  ];

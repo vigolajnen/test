@@ -1,0 +1,24 @@
+.section-title {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 33.6px */
+
+  @media (max-width: 567px) {
+    text-align: center;
+  }
+
+  @media (min-width: 567px) {
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 61.6px */
+  }
+
+  @media (min-width: 960px) {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 66px */
+  }
+}

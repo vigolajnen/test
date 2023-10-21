@@ -1,0 +1,43 @@
+include ../../mixins/svg_icon.pug
+include ../../mixins/section.pug
+include ../../mixins/section-title.pug
+include ../../mixins/advantages-list-item.pug
+
++section({
+  styleWrapper: 'bg-gray-100 advantages',
+  styleInner: 'flex flex-col sm:flex-row flex-wrap',
+  show: 'fade',
+})
+  div(class='relative pt-40 sm:pt-16 xl:pt-0 grow lg:w-1/3 flex flex-col items-center')
+    +section-title({
+      level: 3,
+      styleTitle: 'advantages-title relative z-3 px-10 md:px-4 mx-0 mr-auto text-center max-w-xs sm:text-left sm:my-auto',
+      text: 'Ваша выгода'
+    })
+
+    div(class='advantages-bg absolute top-0 left-1/2 -translate-x-1/2 sm:translate-x-0 xs:left-1/2 md:left-1/3 lg:left-0 w-full sm:w-1/2 lg:w-full h-60 overflow-hidden')
+      div(class='absolute z-0 top-20 right-10 md:top-5 md:left-40 w-20 h-20 md:w-28 md:h-28 bg-white-700 border-4 border-white rounded-2xl')
+      div(class='absolute z-3 top-8  md:top-10 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-20 w-28 h-28 bg-white-700 border-4 border-white rounded-2xl')
+      div(class='absolute z-2 top-12 md:top-0 left-38 w-28 h-28 bg-white-700 border-4 border-white rounded-2xl')
+
+  
+  ul(class='lg:w-2/3 mb-4')
+    +advantages-list-item({
+      title: 'все включено, без ограничений',
+      description: 'Бассейн*, спа, тренажеры, кардиозона, групповые авторские уроки, шкафчик в просторной раздевалке',
+    })
+      +svg_icon(("images/sprite.svg"), "icon-gym", "55", "55", "0 0 55 55")
+
+    +advantages-list-item({
+      title: 'доступная цена',
+      description: 'Cпециальный тарифный план со скидками, не нужно платить на год вперед',
+    })
+      +svg_icon(("images/sprite.svg"), "icon-best-price ", "55", "55", "0 0 57 55")
+      
+    +advantages-list-item({
+      title: 'Комфортное продление',
+      description: 'Понравилось? Удобное автоматическое списание подписки за абонемент с возможностью отмены в любой момент',
+    })
+      +svg_icon(("images/sprite.svg"), "icon-heart", "55", "55", "0 0 55 55")
+  
+  div(class='absolute bottom-0 right-0') *при наличии его в клубе

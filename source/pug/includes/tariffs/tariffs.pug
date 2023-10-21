@@ -1,0 +1,14 @@
+include ../../mixins/section.pug
+include ../../mixins/section-title.pug
+
++section({
+  id: 'tariffs',
+  styleWrapper: 'tariffs relative overflow-hidden bg-curious-blue-500',
+  styleInner: 'max-w-screen-xl overflow-hidden',
+  show: 'fade',
+})
+  +section-title({
+    level: 2,
+    styleTitle: 'text-white-50',
+    text: 'Тарифы'
+  })

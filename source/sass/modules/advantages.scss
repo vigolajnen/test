@@ -1,0 +1,26 @@
+@media (min-width: 1024px) {
+  .advantages .container::before {
+    content: '';
+    position: absolute;
+    top: -15%;
+    right: -10%;
+    width: 188px;
+    height: 188px;
+    background-image: url('../../images/decor/3.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.advantages-bg {
+  max-width: 320px;
+  margin-right: auto;
+}
+
+@media (max-width: 566px) {
+  .advantages-title {
+    font-size: 35px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+}

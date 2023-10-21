@@ -1,0 +1,19 @@
+extends ../layouts/main.pug
+block variables
+  include ../data/_constants.pug
+  include ../data/_samara.pug
+  -
+    const TITLE = `Fitness House в Самаре | Безлимитный абонемент за месяц ${MIN_PRICE} руб.`
+    const DESCRIPTION = `Фитнес-клуб с бассейном с оплатой за месяц ${MIN_PRICE} руб. Бассейн, спа, групповые занятия, тренажерный зал.`
+    const url = 'index'
+
+block content
+
+  include ../includes/promo/promo.pug
+  include ../includes/timer/timer.pug
+  include ../includes/clubs-services/clubs-services.pug
+  include ../includes/tariffs/tariffs.pug
+  
+  div(class='overflow-hidden')
+    include ../includes/advantages/advantages.pug
+  include ../includes/clubs-gallery/clubs-gallery.pug
