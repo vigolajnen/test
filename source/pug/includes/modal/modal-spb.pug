@@ -1,0 +1,8 @@
+include ../../mixins/modal.pug
+include ../../mixins/tariff-form.pug
+
++modal('Оформить абонемент', 1)
+  +tariff-form(TARIFF_DATA_SPB, 'morning')
++modal('Оформить абонемент', 2)
+  +tariff-form(TARIFF_DATA_SPB, 'full')
+

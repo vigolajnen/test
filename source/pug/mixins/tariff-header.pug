@@ -1,0 +1,25 @@
+mixin tariff-header(el)
+  div(class='tariff__header text-curious-blue-500 border-solid bg-lemon-chiffon-100 border-mako-100 flex flex-wrap px-2 sm:px-4 py-2 w-full rounded-full text-sm bg-yellow-100 border-2 border-yellow-200') 
+    if (el.period === 'morning' && !el.mc)
+      div(class='mr-2 xs:mr-1 sm:mr-2 my-auto w-6 sm:w-10')
+        +svg_icon(("images/sprite.svg"), "icon-sun", "36", "36", "0 0 36 36")
+      div(class='w-2/3 grow')
+        div 
+          b Утренний в 1 клуб
+        div Посещение 7:00-17:00
+              
+    else if (el.period === 'full' && !el.mc)
+      div(class='mr-2 xs:mr-1 sm:mr-2 my-auto w-6 sm:w-10')
+        +svg_icon(("images/sprite.svg"), "icon-check", "36", "36", "0 0 36 36")
+      div(class='w-2/3 grow')
+        div 
+          b Весь день в 1 клуб
+        div Посещение 7:00-23:00
+
+    else if (el.period === 'full' && el.mc)
+      div(class='mr-2 xs:mr-1 sm:mr-2 my-auto w-6 sm:w-10')
+        +svg_icon(("images/sprite.svg"), "icon-crown", "36", "36", "0 0 36 36")
+      div(class='w-2/3 grow')
+        div 
+          b Весь день во все клубы
+        div Посещение 7:00-23:00

@@ -1,78 +1,28 @@
+include ../../mixins/tariff-header.pug
+include ../../mixins/tariff-price.pug
+include ../../mixins/tariff-info.pug
+include ../../mixins/tariff-list-zone.pug
+
 .swiper(id='carousel-tariffs' class='carousel-tariffs')
   .swiper-wrapper
     each el in TARIFF_DATA_SAMARA
       .swiper-slide(class='h-auto')
-        div(class='tariff relative z-10 w-full mb-4 sm:mx-4 sm:my-4 md:my-0 p-6 sm:p-6 rounded-3xl shadow-lg bg-white-50')
+        div(class=tariffWrapperClass(el))
+          div(class='relative z-2')
+            //- header
+            +tariff-header(el)
+            //- title
+            h3(class='tariff__name my-2 mt-3 md:my-4')=el.webTitle
+            //- price
+            +tariff-price(el)
+            //- info
+            +tariff-info(el)
 
-          //- header
-          div(class='tariff__header bg-lemon-chiffon-100 border-mako-100 flex flex-wrap px-2 sm:px-4 py-2 w-full rounded-full text-sm bg-yellow-100 border-2 border-yellow-200')
-            if (el.period === 'morning' && !el.mc)
-              div(class='mr-1 xs:mr-1 sm:mr-2 my-auto w-6 sm:w-10')
-                +svg_icon(("images/sprite.svg"), "icon-sun", "36", "36", "0 0 36 36")
-              div(class='w-2/3 grow')
-                div 
-                  b Утренний в 1 клуб
-                div Посещение 7:00-17:00
+            //- membership
+            include ../tariff/tariff-membership.pug
+
+            //- btn
+            a(onclick='toggleModal(' + el.id +')' href='#modal-' + el.id class='block p-4 w-full rounded-full text-center font-bold uppercase text-white ' + tariffBtnClass(el)) Купить
             
-            else if (el.period === 'full' && !el.mc)
-              div(class='mr-1 xs:mr-1 sm:mr-2 my-auto w-6 sm:w-10')
-                +svg_icon(("images/sprite.svg"), "icon-check", "36", "36", "0 0 36 36")
-              div(class='w-2/3 grow')
-                div 
-                  b Весь день в 1 клуб
-                div Посещение 7:00-23:00
-
-            else if (el.period === 'full' && el.mc)
-              div(class='mr-1 xs:mr-1 sm:mr-2 my-auto w-6 sm:w-10')
-                +svg_icon(("images/sprite.svg"), "icon-crown", "36", "36", "0 0 36 36")
-              div(class='w-2/3 grow')
-                div 
-                  b Весь день во все клубы
-                div Посещение 7:00-23:00
-
-          //- title
-          h3(class='tariff__name my-2 mt-3 md:my-4')=el.webTitle
-
-          //- price
-          div(class='tariff__price')
-            span=el.price
-              sup(class='tariff__star') *
-            span(class='tariff__val') ₽/месяц
-
-          //- info
-          div(class="my-2 md:my-4 opacity-70 text-sm md:text-base")
-            if (el.period === 'morning' && !el.mc)
-              p Тариф дает возможность посещать 1 клуб до 17:00
-            else if (el.period === 'full' && !el.mc)
-              p Тариф дает возможность посещать 1 клуб
-            else if (el.period === 'full' && el.mc)
-              p Тариф дает возможность посещать  !{el.countClubs} клуба
-            
-            ul(class='my-2 list-disc pl-4')
-              each club in el.clubs
-                li=club.club.address
-
-          //- membership
-          div(class='my-2 mb-4 md:my-4 md:mb-6 text-sm md:text-base font-medium')
-            | *при оплате Членского взноса
-            |
-            |
-            span !{CONTRIBUTION}
-
-            div(class='relative inline-flex flex-col ml-1 items-center group')
-              //- icon
-              div(class='w-10 h-10')
-                +svg_icon(("images/sprite.svg"), "icon-information", "18", "18", "0 0 22 22")
-              div(class='absolute bottom-0 left-0 md:left-auto md:right-0 flex-col items-center hidden mb-6 group-hover:flex')
-                span(class='relative z-10 p-2 md:p-4 text-md leading-none text-white-800 whitespace-no-wrap bg-white-100 shadow-lg rounded-md w-60 max-w-full text-center') !{TEXT_SUBSCRIPTION_TOOLTIP}
-
-
-          //- btn
-          a(href='#' class='btn block p-4 w-full rounded-full text-center font-bold uppercase text-white') Купить
-          //- list
-          ul(class='pt-4 md:pt-8')
-            each li in TARIFF_LIST
-              li(class='flex items-baseline mb-2 relative')
-                div(class='absolute left-0 top-0 w-5 md:w-6 h-4 md:h-5')
-                  +svg_icon(("images/sprite.svg"), "icon-check-circle", "17", "16", "0 0 17 16")
-                span(class='w-full pb-1 pl-6 md:pl-8 text-sm md:text-md')=li
+            //- list
+            +tariff-list-zone(TARIFF_LIST_ZONE_SAMARA)

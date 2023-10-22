@@ -39,6 +39,7 @@ const paths = {
       'source/js/data.js',
       'source/js/modules/header.js',
       'source/js/modules/carousel.js',
+      'source/js/modules/modal.js',
       'source/js/modules/timer.js',
       'source/js/modules/validate-form.js',
       'source/js/modules/forms.js',

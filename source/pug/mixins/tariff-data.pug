@@ -1,0 +1,24 @@
+mixin tariff-data(data, data_zone)
+  each el in data
+    div(class=tariffWrapperClass(el))
+      div(class='relative z-2')
+        //- header
+        +tariff-header(el)
+
+        //- title
+        h3(class='tariff__name my-2 mt-3 md:my-4')=el.webTitle
+
+        //- price
+        +tariff-price(el)
+
+        //- info
+        +tariff-info(el)
+
+        //- membership
+        block
+
+        //- btn
+        a(onclick='toggleModal(' + el.id +')' href='#modal-' + el.id class='block p-4 w-full rounded-full text-center font-bold uppercase text-white ' + tariffBtnClass(el)) Купить
+        
+        //- list
+        +tariff-list-zone(data_zone)

@@ -30,9 +30,9 @@
   const saleEndDateCity = () => {
     const url = window.location.pathname;
     if (url === '/spb.html') {
-      return new Date('May 04, 2024 00:00:00')
+      return new Date('October 24, 2023 00:00:00')
     }
-    return new Date('May 24, 2024 00:00:00')
+    return new Date('October 24, 2023 00:00:00')
   }
 
   let deadline = saleEndDateCity().getTime();

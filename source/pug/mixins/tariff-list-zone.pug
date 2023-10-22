@@ -1,0 +1,7 @@
+mixin tariff-list-zone(data)
+  ul(class='pt-4 md:pt-8')
+    each li in data
+      li(class='flex items-baseline mb-2 relative')
+        div(class='absolute left-0 top-0 w-5 md:w-6 h-4 md:h-5')
+          +svg_icon(("images/sprite.svg"), "icon-check-circle", "17", "16", "0 0 17 16")
+        span(class='w-full pb-1 pl-6 md:pl-8 text-sm md:text-md')=li

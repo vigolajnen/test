@@ -1,0 +1,5 @@
+mixin tariff-price(data)
+  div(class='tariff__price')
+    span(class='relative mr-1')=formatPrice(data.price)
+      sup(class='tariff__star') *
+    span(class='tariff__val') ₽/месяц

@@ -6,7 +6,29 @@
   //-  текст подсказки у тарифа
   const TEXT_SUBSCRIPTION_TOOLTIP = 'Вступительный платеж оплачивается один раз и дает право на ежемесячное получение скидки относительно стоимости годового Абонентского договора';
 
+  const TEXT_TOOLTIP_BIRTH_DAY = 'Услуга не может быть оказана лицам моложе 14 лет';
   const CITIES = {
     spb: 'Санкт-Петербург',
     samara: 'Самара',
   }
+
+  const formatPrice = price => {
+    let str = price.toString();
+    return `${str.slice(0, 1)}.${str.slice(1)}`;
+  };
+
+  const tariffWrapperClass = (el) => {
+    if (el.period === 'full' && !el.mc) {
+      return 'tariff active relative z-10 w-full mb-4 sm:mx-4 sm:my-4 md:my-0 p-6 sm:p-6 rounded-3xl shadow-lg bg-white-50'
+    }
+    return 'tariff relative z-10 w-full mb-4 sm:mx-4 sm:my-4 md:my-0 p-6 sm:p-6 rounded-3xl shadow-lg bg-white-50'
+  };
+
+  const tariffBtnClass = (el) => {
+    if (el.period === 'full' && !el.mc) {
+      return 'btn'
+    }
+    return 'btnOutline'
+  };
+
+  //- const maxDate = maxValueDate().toString();
