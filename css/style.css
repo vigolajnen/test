@@ -2162,7 +2162,7 @@ html {
   padding: 0.575rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 50px;
+  line-height: 30px;
   color: #000;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2179,36 +2179,28 @@ html {
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
 }
 .form__select {
-  display: block;
-  width: 100%;
-  margin: 0.3rem 0;
-  padding: 0.575rem 2.25rem 0.575rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 50px;
-  color: #000;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
   background-image: url(../../images/icons/icon-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-  border: 1px solid #d0d5dd;
-  border-radius: 10px;
-  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  -webkit-box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
-  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
 }
 
 @media (min-width: 960px) {
   .footer__docs a {
     max-width: 250px;
   }
+}
+
+.modal {
+  min-height: 100vh;
+}
+
+.modal-content {
+  height: 100%;
+}
+.modal-content .form {
+  height: 100%;
+  overflow-y: auto;
 }
 
 .hover\:border-curious-blue-500:hover {
