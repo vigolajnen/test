@@ -2182,9 +2182,6 @@ html {
   .xs\:left-1\/2 {
     left: 50%;
   }
-  .xs\:mr-1 {
-    margin-right: 0.25rem;
-  }
   .xs\:h-28 {
     height: 7rem;
   }
@@ -2214,9 +2211,6 @@ html {
   }
   .sm\:mb-10 {
     margin-bottom: 2.5rem;
-  }
-  .sm\:mr-2 {
-    margin-right: 0.5rem;
   }
   .sm\:block {
     display: block;
