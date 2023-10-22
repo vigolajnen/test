@@ -1885,6 +1885,11 @@ html {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
 }
+.tariff__tooltip {
+  -webkit-transform: translateX(40%);
+  transform: translateX(40%);
+}
+
 @media (min-width: 567px) {
   .tariff {
     max-width: 360px;
