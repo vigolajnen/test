@@ -576,6 +576,10 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .inset-0 {
   inset: 0px;
 }
@@ -1205,6 +1209,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1629,6 +1638,9 @@ html {
 .header {
   background-color: rgba(255, 255, 255, 0.8);
 }
+.header.active {
+  background-color: #ffffff;
+}
 
 .section-title {
   font-size: 28px;
@@ -1689,6 +1701,9 @@ html {
   background-color: #fff06b;
 }
 
+.carousel-promo {
+  padding-top: 70px;
+}
 .carousel-promo .swiper {
   min-height: 372px;
 }
@@ -2123,6 +2138,12 @@ html {
   height: 50px;
 }
 
+@media (min-width: 960px) {
+  .footer__docs a {
+    max-width: 250px;
+  }
+}
+
 .hover\:border-curious-blue-500:hover {
   --tw-border-opacity: 1;
   border-color: rgb(28 138 200/var(--tw-border-opacity));
@@ -2267,6 +2288,10 @@ html {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
+  .sm\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
   .sm\:pt-16 {
     padding-top: 4rem;
   }
@@ -2315,6 +2340,12 @@ html {
   .md\:mb-6 {
     margin-bottom: 1.5rem;
   }
+  .md\:ml-auto {
+    margin-left: auto;
+  }
+  .md\:mr-0 {
+    margin-right: 0px;
+  }
   .md\:mt-10 {
     margin-top: 2.5rem;
   }
@@ -2338,6 +2369,9 @@ html {
   }
   .md\:w-6 {
     width: 1.5rem;
+  }
+  .md\:max-w-screen-sm {
+    max-width: 640px;
   }
   .md\:translate-x-0 {
     --tw-translate-x: 0px;
@@ -2448,8 +2482,11 @@ html {
   .xl\:w-56 {
     width: 14rem;
   }
-  .xl\:gap-24 {
-    gap: 6rem;
+  .xl\:w-60 {
+    width: 15rem;
+  }
+  .xl\:gap-32 {
+    gap: 8rem;
   }
   .xl\:p-10 {
     padding: 2.5rem;
