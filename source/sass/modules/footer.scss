@@ -1,0 +1,9 @@
+.footer {
+  &__docs {
+    & a {
+      @media (min-width: 960px) {
+        max-width: 250px;
+      }
+    }
+  }
+}
