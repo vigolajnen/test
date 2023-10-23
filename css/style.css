@@ -2154,6 +2154,15 @@ html {
 .form::placeholder {
   color: #667085;
 }
+.form label .error {
+  display: none;
+}
+.form label.is-invalid .form__field {
+  border-color: #ba1b1b;
+}
+.form label.is-invalid .error {
+  display: block;
+}
 .form__field {
   display: block;
   width: 100%;
