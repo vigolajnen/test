@@ -2,8 +2,8 @@ include ../../mixins/modal.pug
 include ../../mixins/tariff-form.pug
 
 +modal('Оформить абонемент', 1)
-  +tariff-form(TARIFF_DATA_SAMARA, 'morning')
+  +tariff-form(TARIFF_DATA_SAMARA, 'morning', '1 месяц утро Самара Подписка', '1900')
 +modal('Оформить абонемент', 2)
-  +tariff-form(TARIFF_DATA_SAMARA, 'full')
+  +tariff-form(TARIFF_DATA_SAMARA, 'full', '1 месяц Самара Подписка', '2500')
 +modal('Оформить абонемент', 3)
-  +tariff-form(TARIFF_DATA_SAMARA, 'mc')
+  +tariff-form(TARIFF_DATA_SAMARA, 'mc', 'Мультикарта Самара 1 месяц Подписка', '3100')

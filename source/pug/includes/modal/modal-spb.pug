@@ -2,7 +2,6 @@ include ../../mixins/modal.pug
 include ../../mixins/tariff-form.pug
 
 +modal('Оформить абонемент', 1)
-  +tariff-form(TARIFF_DATA_SPB, 'morning')
+  +tariff-form(TARIFF_DATA_SPB, 'morning', '1 месяц утро Подписка', '1500')
 +modal('Оформить абонемент', 2)
-  +tariff-form(TARIFF_DATA_SPB, 'full')
-
+  +tariff-form(TARIFF_DATA_SPB, 'full', '1 месяц Подписка', '1900')

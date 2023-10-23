@@ -51,6 +51,10 @@
       
     }
   }
+
+  &__tooltip {
+    transform: translateX(40%);
+  }
 }
 
 @media (min-width: 567px) {

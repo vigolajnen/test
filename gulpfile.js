@@ -37,10 +37,14 @@ const paths = {
   scripts: {
     src: [
       'source/js/data.js',
+      'source/js/modules/api.js',
       'source/js/modules/header.js',
       'source/js/modules/carousel.js',
       'source/js/modules/modal.js',
       'source/js/modules/timer.js',
+      'source/js/modules/validate/date.js',
+      'source/js/modules/validate/phone.js',
+      'source/js/modules/validate/input-words.js',
       'source/js/modules/validate-form.js',
       'source/js/modules/forms.js',
     ],
@@ -48,6 +52,7 @@ const paths = {
     vendorSrc: [
       './node_modules/swiper/swiper-bundle.min.js',
       './node_modules/aos/dist/aos.js',
+      './node_modules/imask/dist/imask.min.js',
     ],
   },
   html: {
