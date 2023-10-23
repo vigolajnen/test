@@ -11,6 +11,14 @@
   animation: itemHover 1s forwards;
 }
 
+.clubs-item {
+  min-height: 150px;
+
+  @media (min-width: 567px) {
+    min-height: auto;
+  }
+}
+
 .clubs-item::before {
   content: '';
   position: absolute;

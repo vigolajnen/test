@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      console.log('kkk');
 
       if (onCheckValidateForm(form)) {
         // добавляю disabled для кнопки

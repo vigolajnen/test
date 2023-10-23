@@ -43,8 +43,8 @@ mixin tariff-form(data, period, title, price, onSubmit)
           span(class='inline-flex flex-col ml-1 group')
             span(class='w-8 h-auto')
               +svg_icon(("images/sprite.svg"), "icon-info", "18", "18", "0 0 22 22")
-            span(class='absolute bottom-0 left-1/2 -translate-x-1/2 flex-col items-center hidden mb-6 group-hover:flex')
-              small(class='relative z-10 p-2 md:p-4 text-md leading-none text-white-800 whitespace-no-wrap bg-white-100 shadow-lg rounded-md w-60 max-w-full text-center') !{TEXT_TOOLTIP_BIRTH_DAY}
+            span(class='absolute top-0 left-1/2 -translate-x-1/2 flex-col items-center hidden mb-6 group-hover:flex')
+              span(class='relative z-10 p-2 md:p-4 text-lg font-normal leading-none text-white-800 whitespace-no-wrap bg-white-100 shadow-lg rounded-md w-60 max-w-full text-center') !{TEXT_TOOLTIP_BIRTH_DAY}
 
         input(type='date'
           name='birthDay'
