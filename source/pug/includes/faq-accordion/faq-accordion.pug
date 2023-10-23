@@ -1,11 +1,51 @@
 include ./data.pug
+include ../../mixins/faq-list-item.pug
 
 div(class='accordion faq-accordion flex flex-col items-center justify-center')
-  each el in listFaqAccordion.length ? listFaqAccordion : ['There are no data']
-    div(class='w-full')
-      input(type='checkbox' name='panel' id=`panel-${el.id}` class='hidden')
-      label(for=`panel-${el.id}`
-        class='relative block p-4 cursor-pointer')
-        span(class="w-4/5 block")=el.title
-      div(class='accordion__content overflow-hidden bg-grey-lighter')
-        div(className='accordion__body' id=`panel${el.id}`)=el.text
+  +faq-list-item({
+    id: listFaqAccordion[0].id,
+    title:listFaqAccordion[0].title
+  })
+    div Посещать клубы можно в часы их работы:
+      br
+      | - пн-пт с 07:00 до 23:00,
+      br
+      | - сб-вс (и праздничные дни) с 08:00 до 22:00
+
+  +faq-list-item({
+    id: listFaqAccordion[1].id,
+    title:listFaqAccordion[1].title
+  })
+    div !{listFaqAccordion[1].text}
+  
+  +faq-list-item({
+    id: listFaqAccordion[2].id,
+    title:listFaqAccordion[2].title
+  })
+    div Вступительный взнос включает: 
+      br
+      |- Составление плана персональной тренировки;
+      br
+      |- Личный ключ для доступа в клуб (браслет);
+      br
+      |- Ежемесячное получение скидки.
+
+    div Вступительный взнос оплачивается один раз и активен весь срок действия вашего договора.
+        
+  +faq-list-item({
+    id: listFaqAccordion[3].id,
+    title:listFaqAccordion[3].title
+  })
+    div !{listFaqAccordion[3].text}
+
+  +faq-list-item({
+    id: listFaqAccordion[4].id,
+    title:listFaqAccordion[4].title
+  })
+    div !{listFaqAccordion[4].text}
+
+  +faq-list-item({
+    id: listFaqAccordion[5].id,
+    title:listFaqAccordion[5].title
+  })
+    div !{listFaqAccordion[5].text}
