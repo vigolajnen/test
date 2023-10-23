@@ -1,0 +1,15 @@
+include ../../mixins/section.pug
+include ../../mixins/section-title.pug
+
++section({
+  styleWrapper: 'faq bg-porcelain-50 faq pb-20 -mt-10 lg:-mt-16',
+  styleInner: '',
+  show: 'fade',
+})
+  +section-title({
+    level: 3,
+    styleTitle: 'text-center',
+    text: 'отвечаем на Вопросы'
+  })
+
+  include ../faq-accordion/faq-accordion.pug

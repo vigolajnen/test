@@ -36,7 +36,7 @@ mixin tariff-form(data, period, title, price, onSubmit)
               each el in [...data[1].clubs]
                 option( value=el.id.fullID)=el.club.addressForm
 
-    div(class='mb-2 flex flex-col w-full relative')
+    div(class='mb-2 px-2 flex flex-col w-full relative')
       label(class='mb-2 flex flex-col leading-6 text-white-900')
         span(class='font-black text-md mr-auto') Дата рождения
 
@@ -54,7 +54,7 @@ mixin tariff-form(data, period, title, price, onSubmit)
 
       small(class='hidden absolute top-0 right-0 text-md text-mexican-red-700') Заполните поле
 
-    div(class='mb-2 flex flex-col w-full relative')
+    div(class='mb-2 px-2 flex flex-col w-full relative')
       label(class='mb-2 flex flex-col leading-6 text-white-900')
         span(class='font-black text-md mr-auto') Email
         input(placeholder='Email'
@@ -68,7 +68,7 @@ mixin tariff-form(data, period, title, price, onSubmit)
     
     button(type='submit' class='btn w-full rounded-3xl bg-curious-blue-500 text-white hover:bg-white-50 hover:text-curious-blue-500 hover:border-curious-blue-500 border-2 font-bold block p-4 my-2 mx-1 grow') Далее
 
-    div(class='relative flex flex-col gap-x-3 max-w-screen-sm')
+    div(class='relative pt-4 flex flex-col gap-x-3 max-w-screen-sm')
       label(class='flex gap-x-3 pb-3 xl:pb-5')
         span(class='flex h-6 items-center')
           input(id='isCheck' type='checkbox' required class='block font-normal border-2 border-mako-100 focus:border-mako-500 rounded-lg bg-transparent p-2 py-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6')

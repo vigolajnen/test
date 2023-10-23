@@ -1,0 +1,25 @@
+.tariffs::before,
+.tariffs::after {
+  content: '';
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  background: radial-gradient(
+    100% 100% at center,
+    transparent 0,
+    rgba(255, 255, 255, 0.756) 0.01%,
+    transparent 76.56%
+  );
+
+  filter: blur(162px);
+}
+
+.tariffs::before {
+  top: 0;
+  right: 0;
+}
+
+.tariffs::after {
+  bottom: 0;
+  left: 0;
+}
