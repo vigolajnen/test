@@ -1270,6 +1270,10 @@ video {
   padding-top: 1.5rem;
 }
 
+.pt-9 {
+  padding-top: 2.25rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1409,17 +1413,6 @@ video {
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
-}
-
-.ring-1 {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  -webkit-box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 rgba(0, 0, 0, 0));
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 rgba(0, 0, 0, 0));
-}
-
-.ring-opacity-5 {
-  --tw-ring-opacity: 0.05;
 }
 
 .filter {
@@ -1847,6 +1840,27 @@ html {
   border-color: transparent;
   background-color: #1c8ac8;
   color: white;
+}
+
+.tariffs::before,
+.tariffs::after {
+  content: "";
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  background: radial-gradient(100% 100% at center, transparent 0, rgba(255, 255, 255, 0.756) 0.01%, transparent 76.56%);
+  -webkit-filter: blur(162px);
+  filter: blur(162px);
+}
+
+.tariffs::before {
+  top: 0;
+  right: 0;
+}
+
+.tariffs::after {
+  bottom: 0;
+  left: 0;
 }
 
 .tariff {
