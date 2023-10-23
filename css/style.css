@@ -833,6 +833,10 @@ video {
   height: 100%;
 }
 
+.max-h-full {
+  max-height: 100%;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2188,7 +2192,7 @@ html {
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
 }
 .form__select {
-  background-image: url(../../images/icons/icon-arrow.svg);
+  background-image: url(../images/icons/icon-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
@@ -2205,11 +2209,14 @@ html {
 }
 
 .modal-content {
-  height: 100%;
+  height: auto;
+  width: 100%;
+  max-width: 700px;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 .modal-content .form {
   height: 100%;
-  overflow-y: auto;
 }
 
 .hover\:border-curious-blue-500:hover {
@@ -2455,6 +2462,9 @@ html {
   .md\:p-4 {
     padding: 1rem;
   }
+  .md\:p-6 {
+    padding: 1.5rem;
+  }
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -2566,6 +2576,10 @@ html {
   .xl\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+  .xl\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
   .xl\:px-20 {
     padding-left: 5rem;
