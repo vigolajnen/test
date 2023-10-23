@@ -1822,6 +1822,10 @@ html {
   border-color: transparent;
   background-color: #1c8ac8;
 }
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: #778b97;
+}
 
 .btn:hover {
   background-color: transparent;
@@ -1834,6 +1838,10 @@ html {
   background-color: transparent;
   border-color: #1c8ac8;
   color: #1c8ac8;
+}
+.btnOutline:disabled {
+  cursor: not-allowed;
+  background-color: #778b97;
 }
 
 .btnOutline:hover {
@@ -2482,6 +2490,10 @@ html {
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+  .md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .md\:px-4 {
     padding-left: 1rem;
