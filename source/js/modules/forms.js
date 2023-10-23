@@ -46,13 +46,13 @@ const onSubmitForm = e => {
     redirect: 'follow',
   };
   // 'orders'
-  // generalRequest('orders', requestOptions)
-  //   .then(result => {
-  //     if (result.pay_url) {
-  //       window.location = result.pay_url;
-  //     }
-  //   })
-  //   .catch(error => console.log('error', error));
+  generalRequest('orders', requestOptions)
+    .then(result => {
+      if (result.pay_url) {
+        window.location = result.pay_url;
+      }
+    })
+    .catch(error => console.log('error', error));
 
   // // цели метрики
   // ym(93723690, 'reachGoal', 'form-check');

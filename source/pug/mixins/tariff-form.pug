@@ -1,19 +1,19 @@
 mixin tariff-form(data, period, title, price, onSubmit)
   form(class='form needs-validation flex flex-wrap grow w-full' onSubmit=onSubmit)
 
-    div(class='mb-2 px-2 flex flex-col w-full sm:w-1/2 relative')
+    div(class='mb-2 md:px-2 flex flex-col w-full sm:w-1/2 relative')
       label(class='mb-2 flex flex-col leading-6 text-white-900')
         span(class='font-black text-md mr-auto') Имя
         input(name='firstName' type='text' placeholder='Имя' required class='form__field block font-normal border-2 border-mako-100 focus:border-mako-500 rounded-lg bg-transparent p-2 py-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6')
         small(class='error absolute top-0 right-0 text-md text-mexican-red-700') Заполните поле
 
-    div(class='mb-2 px-2 flex flex-col w-full sm:w-1/2 relative')
+    div(class='mb-2 md:px-2 flex flex-col w-full sm:w-1/2 relative')
       label(class='mb-2 flex flex-col leading-6 text-white-900')
         span(class='font-black text-md mr-auto') Фамилия
         input(name='lastName' type='text' value='' placeholder='Фамилия' required class='form__field block font-normal border-2 border-mako-100 focus:border-mako-500 rounded-lg bg-transparent p-2 py-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6')
         small(class='error absolute top-0 right-0 text-md text-mexican-red-700') Заполните поле
 
-    div(class='mb-2 px-2 flex flex-col w-full relative')
+    div(class='mb-2 md:px-2 flex flex-col w-full relative')
       label(class='mb-2 flex flex-col leading-6 text-white-900')
         span(class='font-black text-md mr-auto') Номер телефона
         input(name='phone' type='tel' value='' placeholder='+7(999) 999-99-99' mask='+7(999) 999-99-99' required class='form__field block font-normal border-2 border-mako-100 focus:border-mako-500 rounded-lg bg-transparent p-2 py-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6')
@@ -36,7 +36,7 @@ mixin tariff-form(data, period, title, price, onSubmit)
               each el in [...data[1].clubs]
                 option( value=el.id.fullID)=el.club.addressForm
 
-    div(class='mb-2 px-2 flex flex-col w-full relative')
+    div(class='mb-2 md:px-2 flex flex-col w-full relative')
       label(class='mb-2 flex flex-col leading-6 text-white-900')
         span(class='font-black text-md mr-auto') Дата рождения
 
@@ -54,7 +54,7 @@ mixin tariff-form(data, period, title, price, onSubmit)
 
       small(class='hidden absolute top-0 right-0 text-md text-mexican-red-700') Заполните поле
 
-    div(class='mb-2 px-2 flex flex-col w-full relative')
+    div(class='mb-2 md:px-2 flex flex-col w-full relative')
       label(class='mb-2 flex flex-col leading-6 text-white-900')
         span(class='font-black text-md mr-auto') Email
         input(placeholder='Email'

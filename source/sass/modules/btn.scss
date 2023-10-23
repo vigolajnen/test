@@ -4,6 +4,11 @@
   border: 2px solid;
   border-color: transparent;
   background-color: #1c8ac8;
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #778b97;
+  }
 }
 
 .btn:hover {
@@ -17,6 +22,11 @@
   background-color: transparent;
   border-color: #1c8ac8;
   color: #1c8ac8;
+  
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #778b97;
+  }
 }
 
 .btnOutline:hover {
